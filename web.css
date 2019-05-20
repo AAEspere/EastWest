@@ -1,0 +1,74 @@
+/* wrapper for the website, all div sections are contained within */
+#wrapper {
+  padding-top: 10px;
+  margin-left:auto;
+  margin-right:auto;
+  width: 80%;
+  min-width: 500;
+  max-width: 1360px;
+  background-color: #FFFFFF;;
+}
+/* formatting for the section with the contact info (social media and number/email) */
+.socialcolumn {
+  width: 33.3%;
+  float: left;
+}
+.contactcolumn {
+  position: relative;
+  right: -80px;
+  top: -5px;
+  width: 66.6%;
+  float: right;
+}
+/* formatting for the social media section of the website */
+.social {
+  height: 30px;
+  width: 30px;
+  float: left;
+  padding-right:20px;
+}
+
+/* this unordered list is for the contact information */
+.contact {
+  text-decoration: none;
+  font-family: Arial;
+}
+
+.contact ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.contact li {
+  float: left;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.contact li a{
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+#coloredBox {
+  background-color: #0F1863;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+/*formatting for the navigation*/
+#navSection {
+  border-color: #AAAAAA white white white;
+  border-style: solid;
+  margin-top: 45px;
+}
+#navLeft {
+  float: left;
+}
+
+#navRight {
+  float: right;
+}
