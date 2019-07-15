@@ -1,13 +1,5 @@
-/*makes the top row white */
-#toprow {
-  background-color: #FFFFFF;
-  height: 75px;
-  margin-top: -10px;
-  margin-left: -10px;
-  margin-right: -10px;
-}
-
-/* wrapper for the website, all div sections are contained within */
+/*REDOING SECTIONS OF THE WEBSITE FOR A MORE RESPONSIVE WEB DESIGN*/
+/* wrapper for the website, all div sections BESIDES the logo and the top row are fitted within */
 #wrapper {
   margin-left:auto;
   margin-right:auto;
@@ -18,8 +10,32 @@
 }
 
 body {
-  background-color: #ACACAC;
+  background-color: #FFFFFF;
 }
+
+/*
+Use ctrl F to find which section to change. If any aesthetic changes are required, they are done here.
+This css file comprises the template of the website. The template consists of the top bar holding the -
+1. Bar on the top row
+  a. The social media section
+  b. The contact information
+2. Logo and Slogan
+3. Navigation
+4. Call to Action
+#. Footer
+*/
+
+
+/* 1. Bar on the top row */
+/* makes the top row white */
+#toprow {
+  background-color: #FFFFFF;
+  height: 75px;
+  margin-top: -10px;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
 /* formatting for the section with the contact info (social media and number/email) */
 .socialcolumn {
   width: 33.3%;
@@ -67,10 +83,12 @@ body {
   text-decoration: none;
 }
 #coloredBox {
-  background-color: #0F1863;
+  background-color: #1C40A1;
   color: #FFFFFF;
   font-weight: bold;
 }
+
+/* 2. Logo and Slogan */
 
 /*formatting for the logo and slogan*/
 #logo {
@@ -94,9 +112,11 @@ body {
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
+
+/*3. Navigation */
 /*formatting for the navigation*/
 nav {
-  background-color: #0F1863;
+  background-color: #1C40A1;
   color: #FFFFFF;
   font-family: Arial;
   font-weight: bold;
@@ -122,7 +142,7 @@ nav li {
 .navdropdowncontent {
   display: none;
   position: absolute;
-  background-color: #0F1863;
+  background-color: #1C40A1;
   padding-top: 22px;
   min-width: 160px;
   margin-left:-16px;
@@ -146,7 +166,7 @@ nav li:hover .navdropdowncontent {
 }
 
 /*Call to action, which is on the bottom of the website*/
-.callToAction {
+.callToAction_bottom {
   background-color: #B60000;
   color: #FFFFFF;
   font-family: Arial;
@@ -154,34 +174,47 @@ nav li:hover .navdropdowncontent {
   text-align: center;
   padding-top: 5px;
   padding-bottom: 5px;
+  padding-left: 105px;
+  padding-right: 105px;
   height: 250px;
+  position: absolute;
+
 }
 
-.CTAButtonSet1 {
+.CTA_Care_For {
   background-color: #FFFFFF;
   color: #B60000;
   font-family: Arial;
   font-size: 20pt;
   text-align: center;
-  padding-top: 5px;
+  padding-top: 20px;
   padding-bottom: 5px;
   padding-left: 10px;
   padding-right: 10px;
   width: 200px;
+  height: 40px;
   border-color: black black black black;
   border-style: solid;
 }
 
-.buttonLeft {
-  float: left;
-  margin-left: 250px;
+.CTA_Services {
+  background-color: #FFFFFF;
+  color: #B60000;
+  font-family: Arial;
+  font-size: 20pt;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 200px;
+  height: 40px;
+  border-color: black black black black;
+  border-style: solid;
+  display: none;
 }
 
-.buttonRight {
-  float: right;
-  margin-right: 250px;
-}
-
+/* #. Footer */
 /*footer*/
 footer{
   font-family: Arial;
