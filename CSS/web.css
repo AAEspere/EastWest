@@ -13,6 +13,14 @@ body {
   background-color: #FFFFFF;
 }
 
+/*GENERAL STUFF*/
+.floatleft {
+    float:left;
+}
+.floatright {
+    float:right;
+}
+
 /*
 Use ctrl F to find which section to change. If any aesthetic changes are required, they are done here.
 This css file comprises the template of the website. The template consists of the top bar holding the -
@@ -30,13 +38,27 @@ This css file comprises the template of the website. The template consists of th
 /* makes the top row white */
 #toprow {
   background-color: #FFFFFF;
-  height: 75px;
-  margin-top: -10px;
-  margin-left: -10px;
-  margin-right: -10px;
+  margin-bottom: 60px;
+  padding-bottom: 30px;
 }
 
 /* formatting for the section with the contact info (social media and number/email) */
+
+.socialcolumn2 {
+    list-style: none;
+}
+
+.socialcolumn2 li {
+    float: left;
+}
+
+.socialcolumn2 li a {
+    display: block;
+    line-height: 40px;
+    width: 40px;
+}
+
+
 .socialcolumn {
   width: 33.3%;
   float: left;
@@ -47,14 +69,14 @@ This css file comprises the template of the website. The template consists of th
   right: -80px;
   width: 66.6%;
   float: right;
-  padding-top: 20px;
+  padding-top:20px;
 }
 /* formatting for the social media section of the website */
 .social {
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 65px;
   float: left;
-  padding-right:20px;
+  padding-right:30px;
 }
 
 /* this unordered list is for the contact information */
@@ -92,8 +114,7 @@ This css file comprises the template of the website. The template consists of th
 
 /*formatting for the logo and slogan*/
 #logo {
-  background-color: #B60000;
-  height: 140px;
+  background-color: #B61F24;
   margin-left: -10px;
   margin-right: -10px;
 }
@@ -138,6 +159,10 @@ nav li {
   padding-right: 30px;
 }
 
+nav li a{
+  text-decoration: none;
+}
+
 /*button which leads to dropdown menu*/
 .navdropdowncontent {
   display: none;
@@ -166,7 +191,22 @@ nav li:hover .navdropdowncontent {
 }
 
 /*Call to action, which is on the bottom of the website*/
-.callToAction_bottom {
+.callToAction_top {
+  background-color: #B60000;
+  color: #FFFFFF;
+  font-family: Arial;
+  font-size: 26pt;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 5px;
+  padding-left: 105px;
+  padding-right: 105px;
+  height: 250px;
+  transition: width 1s;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.callToAction_bot {
   background-color: #B60000;
   color: #FFFFFF;
   font-family: Arial;
@@ -177,41 +217,42 @@ nav li:hover .navdropdowncontent {
   padding-left: 105px;
   padding-right: 105px;
   height: 250px;
-  position: absolute;
-
+  position: relative;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-.CTA_Care_For {
+.CTA_Care_For_button {
   background-color: #FFFFFF;
   color: #B60000;
   font-family: Arial;
   font-size: 20pt;
   text-align: center;
-  padding-top: 20px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 20px 20px 20px 20px;
+  padding: 20px 10px 10px 10px;
+  border: solid;
+  border-color: black;
   width: 200px;
   height: 40px;
-  border-color: black black black black;
-  border-style: solid;
+  display: inline-block;
+  text-shadow: none;
 }
 
 .CTA_Services {
   background-color: #FFFFFF;
   color: #B60000;
   font-family: Arial;
-  font-size: 20pt;
+  font-size: 17pt;
   text-align: center;
-  padding-top: 20px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 20px 10px 10px 10px;
+  margin: 20px 20px 20px 20px;
   width: 200px;
   height: 40px;
   border-color: black black black black;
   border-style: solid;
-  display: none;
+  display: inline-block;
+  text-shadow: none;
 }
 
 /* #. Footer */

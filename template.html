@@ -7,14 +7,17 @@
   <title> EastWest Health Services </title>
   <meta charset = "utf-8">
   <link rel="stylesheet" href="CSS/web.css">
+  <link rel="stylesheet" href="CSS/slick.css">
+  <link rel="stylesheet" href="CSS/slick-theme.css">
+  <link rel="stylesheet" href="CSS/bootstrap/bootstrap.min.css">
 </head>
 
 <!--Top div section, this is the section detailing the social media, along with
 "get more info", "family portal", "Caregiver Portal", email and number -->
 
 <!--Social media part of the top bar-->
-<div id = "toprow">
-  <div id = "wrapper">
+<div class = "container-fluid">
+    <div class = "container">
     <div class = "socialcolumn">
   <img class = "social" src = "social/Twitter_Logo_Blue.png">
 
@@ -29,15 +32,16 @@
   <div class = "contact">
   <ul>
   <li id = "coloredBox">Get More Info</li>
-  <li>Family Portal</li>
-  <li>Caregiver Portal</li>
+  <li><a href = "https://my.adlware.com/family">Family Portal</a></li>
+  <li><a href = "https://my.adlware.com/cp">Caregiver Portal</a></li>
   <li>EastWestEmail</li>
   <li>EastWestNumber</li>
   </ul>
   </div>
   </div>
     </div>
-</div>
+</div>   
+
 
 <!-- The logo and the slogan -->
 <div id = "logo">
@@ -50,32 +54,32 @@
 <!-- The navigation for the website, where the links to the other pages are -->
 <nav>
   <ul>
-    <li>ABOUT US
+    <li><a href = "about_us.html">ABOUT US</a>
         <div class = navdropdowncontent>
-          <a>OUR MISSION</a>
-          <a>PHYSICIAN REFERRAL</a>
-          <a>10 REASONS TO CONTACT EASTWEST</a>
-          <a>101 WAYS WE CAN HELP YOU</a>
-          <a>APPLY TO BE A CAREGIVER</a>
+          <a href = "our_mission.html">OUR MISSION</a>
+          <a href = "physician_ref.html">PHYSICIAN REFERRAL</a>
+          <a href = "10_reasons.html">10 REASONS TO CONTACT EASTWEST</a>
+          <a href = 101_ways.html>101 WAYS WE CAN HELP YOU</a>
+          <a href = "apply.html">APPLY TO BE A CAREGIVER</a>
           </div>
     </li>
-    <li>OUR SERVICES
+    <li><a href = "services.html">OUR SERVICES</a>
         <div class = navdropdowncontent>
-          <a>REGISTERED NURSING</a>
-          <a>PHYSICAL THERAPY</a>
-          <a>OCCUPATIONAL THERAPY</a>
-          <a>HOME HEALTH AIDE</a>
-          <a>SPEECH THERAPY</a>
-          <a>MEDICAL SOCIAL WORKER</a>
-          <a>PRIVATE DUTY-CAREGIVER SERVICES</a>
-          <a>CASE MANAGEMENT</a>
-          <a>MEDICAL MONITORING</a>
+          <a href = "RN.html">REGISTERED NURSING</a>
+          <a href = "PT.html">PHYSICAL THERAPY</a>
+          <a href = "OT.html">OCCUPATIONAL THERAPY</a>
+          <a href = "HHA.html">HOME HEALTH AIDE</a>
+          <a href = "speech_therapy.html">SPEECH THERAPY</a>
+          <a href = "medical_social_worker.html">MEDICAL SOCIAL WORKER</a>
+          <a href = "private_duty.html">PRIVATE DUTY-CAREGIVER SERVICES</a>
+          <a href = "case_management.html">CASE MANAGEMENT</a>
+          <a href = "medical_monitoring.html">MEDICAL MONITORING</a>
           <a>ORDER MEDICAL SUPPLIES</a>
     </li>
-    <li>REVIEWS</li>
-    <li>NEWS</li>
-    <li>CONTACT US</li>
-    <li>SCHEDULE YOUR ASSESSMENT</li>
+    <li><a href = "reviews.html">REVIEWS</a></li>
+    <li><a href = "news.html">NEWS</a></li>
+    <li><a href = "contact.html">CONTACT US</a></li>
+    <li><a href = "schedule.html">SCHEDULE YOUR ASSESSMENT</a></li>
   </nav>
 
 <div>
@@ -83,46 +87,50 @@
   </div>
 
 <!-- The call to action, where the information is filled in -->
-<!--Call to action Page 1 "Let's get started" -->
-<div class = "callToAction_bottom">
-  <div>Let's get started. Choose an option below.</div>
-  <div>Who do you need care for?</div>
-      <div class = "CTA_Care_For">Myself</div>
-      <div class = "CTA_Care_For">My parent</div>
-      <div class = "CTA_Care_For">Someone else</div>
-    </div>
-
-<!-- The call to Action section under the name "Which services are you interested in?"" -->
-<div class = "callToAction">
-
-  <div>Which services are you interested in? (select all that apply)</div>
-
-  <!-- The individual buttons for this part of the call to Action -->
-  <div class = "CTA_Services">Nursing</div>
-  <div class = "CTA_Services">Physical Therapy</div>
-  <div class = "CTA_Services">Occupational Therapy</div>
-  <div class = "CTA_Services">Speech Therapy</div>
-  <div class = "CTA_Services">Medical Social Worker</div>
-  <div class = "CTA_Services">Private Duty/Caregiver</div>
-  <div class = "CTA_Services">Medical Supplies</div>
-  <div class = "CTA_Services">Medical Monitoring</div>
-  <div class = "CTA_Services">Telehealth</div>
-  <div class = "CTA_Services">Back</div>
-  <div class = "CTA_Services">Next</div>
-    </div>
-
-<!-- The call to Action section under the name "When would you ike to schedule your in-home consultation" -->
-<div class = "callToAction">
-  <div>When would you like to schedule your in-home consultation?</div>
-  </div>
-
-
-<div>
-  Hello world
+<div class = "col-md-12">
+  <h2>Let's get started. Choose an option below.</h2>
 </div>
 
-<!--The code for the script which the Call to Action utilizes-->
+<div class = "col-md-12">
+  <h2>Who do you need care for?</h2>
+</div>
+
+<div class = "col-md-4">
+  <div class = "item" data-formvalue = "Myself">
+    <h5>Myself</h5>
+  </div>
+</div>
+
+
+<div class = "col-md-4">
+  <div class = "item" data-formvalue = "My Parent">
+    <h5>My Parent</h5>
+  </div>
+</div>
+
+<div class = "col-md-4">
+  <div class = "item" data-formvalue = "Someone Else">
+    <h5>Someone Else</h5>
+  </div>
+</div>
+
+
+<!--Call to action Page 1 "Let's get started" -->
+<section id = "slideshow">
+<div class = "slick">
+<div>CONTENT 1</div>
+<div>CONTENT 2</div>
+<div>CONTENT 3</div>
+</div>
+</section>
+<!--The code for the script for slick slider-> this controls how the consult form goes-->
 <script type = "text/javascript">
+  jQuery(function(){
+  $(document).ready(()=> {
+    $('#slideshow .slick').slick();
+  });
+
+});
 </script>
 
 <!--footer of the website, containing the email, number, and copyright-->
