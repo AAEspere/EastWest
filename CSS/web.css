@@ -25,6 +25,12 @@ body {
     width: 50%;
 }
 
+.threecolumn {
+    width: 33.3%;
+    padding-right: 20px;
+    margin-bottom:20px;
+}
+
 .clear {
     clear:both;
 }
@@ -358,6 +364,17 @@ footer{
 #map {
     clear: both;
 }
+
+
+/*Home Page Stuff*/
+.homeButton {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 120px;
+}
+
 
 /*Media queries for different screen sizes
 ---------------------------------------------------------------*/
