@@ -25,6 +25,14 @@ body {
     width: 50%;
 }
 
+.twocolumnBIG {
+    width: 60%;
+}
+
+.twocolumnSMALL {
+    width: 40%;
+}
+
 .threecolumn {
     width: 33.3%;
     padding-right: 20px;
@@ -192,70 +200,6 @@ nav a:visited {
 }
 
 /*Call to action, which is on the bottom of the website*/
-.callToAction_top {
-  background-color: #B60000;
-  color: #FFFFFF;
-  font-family: Arial;
-  font-size: 26pt;
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 5px;
-  padding-left: 105px;
-  padding-right: 105px;
-  height: 250px;
-  transition: width 1s;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-
-.callToAction_bot {
-  background-color: #B60000;
-  color: #FFFFFF;
-  font-family: Arial;
-  font-size: 26pt;
-  text-align: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 105px;
-  padding-right: 105px;
-  height: 250px;
-  position: relative;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-
-.CTA_Care_For_button {
-  background-color: #FFFFFF;
-  color: #B60000;
-  font-family: Arial;
-  font-size: 20pt;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  margin: 20px 20px 20px 20px;
-  padding: 20px 10px 10px 10px;
-  border: solid;
-  border-color: black;
-  width: 200px;
-  height: 40px;
-  display: inline-block;
-  text-shadow: none;
-}
-
-.CTA_Services {
-  background-color: #FFFFFF;
-  color: #B60000;
-  font-family: Arial;
-  font-size: 17pt;
-  text-align: center;
-  padding: 20px 10px 10px 10px;
-  margin: 20px 20px 20px 20px;
-  width: 200px;
-  height: 40px;
-  border-color: black black black black;
-  border-style: solid;
-  display: inline-block;
-  text-shadow: none;
-}
-
 /*Consult form*/
 #consult_form {
     margin-top: 30px;
@@ -279,6 +223,15 @@ nav a:visited {
     border:none; 
 }
 
+#consult_form .item .selectable .item-on {
+    background:#dff0d8; 
+    color:#468847;
+}
+
+#consult_form .item .selectable .item-on *{
+    color:#468847;
+}
+
 #consult_form h2 {
     text-align: center;
     margin: 0 0 20px;
@@ -293,8 +246,21 @@ nav a:visited {
     font-size: 20px;
 }
 
-#consult_form_who_for {
-    
+.whichservice {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+#consult_formWHO {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#consult_formWHICH {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 #consult_form .slick-arrow { display:none!important; }
@@ -373,6 +339,7 @@ footer{
   padding-top: 10px;
   padding-bottom: 10px;
   width: 120px;
+  text-align: center;
 }
 
 
