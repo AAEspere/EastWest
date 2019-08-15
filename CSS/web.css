@@ -98,7 +98,7 @@ This css file comprises the template of the website. The template consists of th
   width: 65px;
   float: left;
   padding-right:30px;
-    
+
 }
 
 /* this unordered list is for the contact information */
@@ -218,13 +218,13 @@ nav a:visited {
     background: #fff;
 }
 
-#consult_form .item.action { 
-    padding:10px; 
-    border:none; 
+#consult_form .item.action {
+    padding:10px;
+    border:none;
 }
 
 #consult_form .item .selectable .item-on {
-    background:#dff0d8; 
+    background:#dff0d8;
     color:#468847;
 }
 
@@ -278,6 +278,10 @@ footer{
   padding-bottom: 5px;
 }
 
+footer a {
+  color: inherit;
+}
+
 .PTList {
     font-weight: bold;
 }
@@ -289,7 +293,7 @@ footer{
 
 #contacticons {
     float: left;
-    width: 30%;
+    width: 50%;
 }
 
 .sendMessage {
@@ -300,7 +304,7 @@ footer{
     color: white;
     font-weight: bold;
     float: right;
-    width: 60%;
+    width: 50%;
     margin-bottom: 20px;
     margin-top: 10px;
 }
@@ -439,7 +443,7 @@ footer{
     #logotext {
         padding-top: 35px;
     }
-    
+
 }
 
 @media(min-width: 1200px) {
@@ -447,4 +451,3 @@ footer{
         float: right;
     }
 }
-
