@@ -41,7 +41,7 @@
 
 <!--The logo of the website-->
  <div id = "logo">
-     <a href = "home.html"><img id = "logopic" src = "eastwest/eastwestRed.png"></a>
+     <a href = "index.html"><img id = "logopic" src = "eastwest/eastwestRed.png"></a>
      <p id = "logotext">The heart of a healthcare is service to others</p>
 </div>
 
@@ -143,25 +143,30 @@
 
             <div class = "floatleft twocolumnBIG">
             <div class = "insertarea">
-            Your Name<br>
-            <input type = "text" name = "fullname">
+            Your Name*<br>
+            <input type = "text" name = "fullname" required = "required">
             </div>
 
             <div class = "insertarea">
-            Email<br>
-            <input type = "text" name = "email">
+            Email*<br>
+            <input type = "email" name = "RNemail" required = "required">
             </div>
 
             <div class = "insertarea">
             Phone Number<br>
-            <input type = "text" name = "phone" placeholder = "###-###-####">
+            <input type = "tel" name = "phone" placeholder = "###-###-####">
             </div>
             </div>
 
             <div class = "clear">
-            Additional Details<br>
-            <textarea id = "subject" name = "subject" placeholder = "Write text here..." style = "height: 150px"></textarea><br>
+            Additional Details*<br>
+            <textarea id = "subject" name = "subject" placeholder = "Write text here..." style = "height: 150px" required = "required"></textarea><br>
             </div>
+            
+            *Required field
+            <br>
+            <br><input type = "submit" value = "submit">
+            
         </form>
     </div>
 

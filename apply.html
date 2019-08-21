@@ -41,7 +41,7 @@
 
 <!--The logo of the website-->
  <div id = "logo">
-     <a href = "home.html"><img id = "logopic" src = "eastwest/eastwestRed.png"></a>
+     <a href = "index.html"><img id = "logopic" src = "eastwest/eastwestRed.png"></a>
      <p id = "logotext">The heart of a healthcare is service to others</p>
 </div>
 
@@ -112,31 +112,31 @@
         <div class = "twocolumn floatleft">
             <div class = "insertarea">
             First Name <br>
-            <input type = "text" name = "firstName">
+            <input type = "text" name = "firstName" required = "required">
             </div>
 
             <div class = "insertarea">
             Last Name <br>
-            <input type = "text" name = "lastName">
+            <input type = "text" name = "lastName" required = "required">
             </div>
 
             <div class = "insertarea">
             Address <br>
-            <input type = "text" name = "address">
+            <input type = "text" name = "address" required = "required">
             </div>
 
             <div class = "insertarea">
             City, State, Zip<br>
-            <input type = "text" name = "CSZ">
+            <input type = "text" name = "CSZ" required = "required">
             </div>
 
             <div class = "insertarea">
             Email Address<br>
-            <input type = "text" name = "email">
+            <input type = "email" name = "applyEmail" required = "required">
             </div>
 
             Phone Number<br>
-            <input type = "text" placeholder = "###-###-####" name = "phone">
+            <input type = "tel" placeholder = "###-###-####" name = "phone" required = "required">
             </div>
 
         <div class = "twocolumn floatleft">
@@ -155,7 +155,7 @@
         <div class = "clear">
         <br>
         Additional Details<br>
-        <textarea id = "subject" name = "subject" placeholder = "Write text here..." style = "height: 150px"></textarea><br>
+        <textarea id = "subject" name = "subject" placeholder = "Write text here..." style = "height: 150px" required = "required"></textarea><br>
         </div>
         </form>
 

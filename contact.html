@@ -41,7 +41,7 @@
 
 <!--The logo of the website-->
  <div id = "logo">
-     <a href = "home.html"><img id = "logopic" src = "eastwest/eastwestRed.png"></a>
+     <a href = "index.html"><img id = "logopic" src = "eastwest/eastwestRed.png"></a>
      <p id = "logotext">The heart of a healthcare is service to others</p>
 </div>
 
@@ -92,35 +92,38 @@
     <div id = "contacticons">
     <br>
         <br>
-        <h2><i class="fa fa-phone"></i> (586)582-9690</h2>
+        <h2><i class="fa fa-phone"></i> &nbsp(586)582-9690</h2>
         <h2><i class="fa fa-fax"></i> (586)582-9590</h2>
         <h2><i class="fa fa-envelope"></i> eastwesthomecare@gmail.com</h2>
-        <h2><i class="fa fa-map-marker"></i> &nbsp &nbsp 31201 Chicago Rd Suite B302</h2>
+        <h2>&nbsp<i class="fa fa-map-marker"></i> &nbsp31201 Chicago Rd Suite B302</h2>
     </div>
 
     <!--The form detailing what is submitted in the contact us section -->
     <div class = "sendMessage">
-        <form>
+        <form method = "post" action = "contactForm.php" >
         <h3>Send us a message</h3>
             <div class = "insertarea">
-            Your name<br>
-            <input type = "text" name = "fullname">
+            Your name*<br>
+            <input type = "text" name = "contactName" required = "required">
                 </div>
 
             <div class = "insertarea">
-            Email<br>
-            <input type = "text" name = "email">
+            Email*<br>
+            <input type = "email" name = "contactEmail" required = "required">
             </div>
 
             <div class = "insertarea">
             Phone Number <br>
-            <input type = "text" placeholder = "###-###-####" name = "phone">
+            <input type = "tel" placeholder = "###-###-####" name = "contactMobile">
             </div>
 
             <div class = "insertarea">
-            How can we help you? <br>
-            <textarea id = "subject" name = "subject" placeholder = "Write here..." style = "height: 100px"></textarea><br>
+            How can we help you?* <br>
+            <textarea id = "subject" name = "contactSubject" placeholder = "Write here..." style = "height: 100px" required = "required"></textarea><br>
             </div>
+            
+            *Field is required<br><br>
+            
             <input type = "submit" value = "submit">
         </form>
 
@@ -208,5 +211,4 @@
     <p><a href = "tel:586-582-9690"><i class = "fa fa-phone"></i> (586)582-9690</a> &nbsp-&nbsp <a href = "mailto:eastwesthomecare@gmail.com"><i class = "fa fa-envelope"></i> eastwesthomecare@gmail.com</a> <br>
     © 2019 EastWest Health Services</p>
     </footer>
-    </div>
 </html>
