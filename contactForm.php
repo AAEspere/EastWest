@@ -21,7 +21,7 @@ try {
             throw new \Exception('ReCaptcha is not set.');
         }
         
-        $recaptcha = new \ReCaptcha\ReCaptcha($6LcUjbQUAAAAAEyRw28Q3lHO00H-lcwF2yPW3U8i, new \ReCaptcha\RequestMethod\CurlPost());
+        $recaptcha = new \ReCaptcha\ReCaptcha(secretcaptcha, new \ReCaptcha\RequestMethod\CurlPost());
         
         $response = $recaptcha->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
 
