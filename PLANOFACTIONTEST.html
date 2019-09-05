@@ -9,14 +9,12 @@
   <link rel="stylesheet" href="CSS/web.css">
   <link rel="stylesheet" href="CSS/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-  <!--Slick Slider stuff -->
-<link rel="stylesheet" href="CSS/slick.css">
-<link rel="stylesheet" href="CSS/slick-theme.css">
-
+  <!--Slick Slider stuff -->  
+<link rel="stylesheet" type = "text/css" href="CSS/slick.css">
+<link rel="stylesheet" type = "text/css" href="CSS/slick-theme.css">
 </head>
 
 <!--Top div section, this is the section detailing the social media, along with
@@ -44,11 +42,9 @@
 
 <!--The logo of the website-->
  <div id = "logo">
-     <div class = "container">
      <a href = "index.html"><img id = "logopic" src = "eastwest/eastwestRed.png"></a>
      <p id = "logotext">The heart of a healthcare is service to others</p>
      </div>
-</div>
 
 <!--The navigation of the website-->
 <nav class = "navbar navbar-expand-lg">
@@ -190,35 +186,23 @@
     </div>
 
         <!--Adding slick-slider stuff here -->
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
-
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="CSS/slick.min.js"></script>
+    
     <script type ="text/javascript">
 
         $(document).ready(function(){
 
             $('#consult_form').slick({
-                slidesToShow: 1;
-                slidesToScroll: 1;
-                adaptiveHeight: true;
-                draggable: false;
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                adaptiveHeight: true,
+                draggable: false,
                 infinite: false;
-            })
-
-            jQuery(window).load(function(){
-                jQuery('#consult_form').css("opacity", "100");
-            })
-
-            jQuery('#consult_form_panel_who_for .item').click(function(){
-				jQuery('#consult_form').slick('slickGoTo',1);
             });
-
-
-
-
-
-        })
+            
+        });
 
     </script>
 

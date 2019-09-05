@@ -54,15 +54,14 @@ try {
         
         $test = mail($emailto, $subject, $messagebody, $headers); // $params);
         header('Location: contact.html');
-        $responseArray = array('type' => 'success', 'message' => $okMessage);
-    
-        
+        $responseArray = array('type' => 'success', 'message' => $okMessage);   
     }
     
+}
+
     catch (\Exception $e) {
     $responseArray = array('type' => 'danger', 'message' => $e->getMessage());
     }
-
 
 /*  OLD CODE
 
@@ -96,8 +95,4 @@ try {
 	header('Location: contact.html');
 	// $test should be TRUE if the mail function is called correctly
 */
-
 ?>
-
-
-

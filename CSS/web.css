@@ -138,12 +138,12 @@ This css file comprises the template of the website. The template consists of th
 /*formatting for the logo and slogan*/
 #logo {
   background-color: #B61F24;
-  height: 150px;
+  height: 130px;
   width: 100%;
 }
 #logopic {
     float: left;
-    padding-top: 20px;
+    padding-top: 7px;
     padding-left: 100px;
     padding-right: 100px;
 }
@@ -346,6 +346,18 @@ footer a {
   text-align: center;
 }
 
+#eastwestSlider {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    width: 100%;
+    height: 500px;
+}
+
+#eastwestPhotos {
+    height: 500px;
+    width: 100%;
+}
 
 /*Media queries for different screen sizes
 ---------------------------------------------------------------*/
@@ -450,4 +462,8 @@ footer a {
      .contact {
         float: right;
     }
+}
+
+.your-class {
+    
 }
