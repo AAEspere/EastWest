@@ -318,6 +318,12 @@ footer a {
     border-bottom: solid 2px white;
 }
 
+.sitemap footer a:hover {
+    text-decoration: none;
+    font-weight: normal;
+    color:#dbdbdb;
+}
+
 .sitemap-icon-row {
     padding-left: 95px;
 }
