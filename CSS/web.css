@@ -303,7 +303,7 @@ footer a {
 }
 
 .sitemap a {
-    color:white;
+    color:#dbdbdb;
     text-decoration: none;
 }
 
@@ -311,6 +311,22 @@ footer a {
     color: white;
     font-weight: bold;
     text-decoration: none;
+}
+
+.sitemap b {
+    padding: 3px;
+    border-bottom: solid 2px white;
+}
+
+.sitemap-icon-row {
+    padding-left: 95px;
+}
+
+.sitemap-icon {
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 /*formatting for the contact us section of the website*/
