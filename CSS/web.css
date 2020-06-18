@@ -210,6 +210,9 @@ nav a:visited {
 }
 
 #consult_form .item {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 10px;
     padding:15px;
     border: 1px solid #ccc;
     cursor: pointer;
@@ -284,6 +287,30 @@ footer a {
 
 .PTList {
     font-weight: bold;
+}
+
+/*Sitemap*/
+.sitemap {
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+    background-color: #B61F24;
+    color:white;
+    font-family: Arial;
+}
+
+.sitemap ul {
+    list-style-type: none;
+}
+
+.sitemap a {
+    color:white;
+    text-decoration: none;
+}
+
+.sitemap a:hover {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 /*formatting for the contact us section of the website*/
