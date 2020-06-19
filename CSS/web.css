@@ -201,7 +201,7 @@ nav a:visited {
 
 /*Call to action, which is on the bottom of the website*/
 /*Consult form*/
-#consult_form {
+#consultForm {
     margin-top: 30px;
     margin-bottom: 20px;
     padding-top: 20px;
@@ -209,7 +209,7 @@ nav a:visited {
     background-color: #B61F24;
 }
 
-#consult_form .item {
+#consultForm .item {
     margin-left: 15px;
     margin-right: 15px;
     margin-bottom: 10px;
@@ -221,35 +221,35 @@ nav a:visited {
     background: #fff;
 }
 
-#consult_form .item.action {
+#consultForm .item.action {
     padding:10px;
     border:none;
 }
 
-#consult_form .item .selectable .item-on {
+#consultForm .item .selectable .item-on {
     background:#dff0d8;
     color:#468847;
 }
 
-#consult_form .item .selectable .item-on *{
+#consultForm .item .selectable .item-on *{
     color:#468847;
 }
 
-#consult_form h2 {
+#consultForm h2 {
     text-align: center;
     margin: 0 0 20px;
     color: #fff;
 }
 
-#consult_form h3 {
+#consultForm h3 {
     color:white;
 }
 
-#consult_form h4 {
+#consultForm h4 {
     text-align: center;
 }
 
-#consult_form h5 {
+#consultForm h5 {
     font-size: 20px;
 }
 

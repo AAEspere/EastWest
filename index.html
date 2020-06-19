@@ -4,18 +4,21 @@
 <!--Name of the website-->
 <!--This is what the tab says-->
 <head>
-  <title> EastWest Health Services </title>
-  <meta charset = "utf-8">
-  <link rel="stylesheet" href="CSS/web.css">
-  <link rel="stylesheet" href="CSS/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="CSS/slick/slick.css">
-  <link rel="stylesheet" href="CSS/slick/slick-theme.css">
+    <title> EastWest Health Services </title>
+    <meta charset = "utf-8">
+    <link rel="stylesheet" href="CSS/web.css">
+    <link rel="stylesheet" href="CSS/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/slick/slick.css">
+    <link rel="stylesheet" href="CSS/slick/slick-theme.css">
     
   
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src = "javascript/jquery-3.5.1.js"></script>
+
+    
+    <!--js being used within the website itself-->
+    <script src = "javascript/consultform.js"></script>
 </head>
 
 <!--Top div section, this is the section detailing the social media, along with
@@ -223,30 +226,37 @@
 
         </div>
         </div>
+        
+    <!--Implementation of the consulting form -->
 
-    <div id = "consult_form">
-    <div class = "slick-panel">
-    <div class = "col-md-12"><h2>Let's Get Started. Choose an option below.</h2></div>
-    <div class = "col-md-12"><h2>Who do you need care for?</h2></div>
-        <div class = "row">
-        <div class = "col-md-4">
-            <div class = "item" data-formvalue = "Myself">
-            <h5>Myself</h5>
+    <form id = "consultForm" action = "#">
+        <fieldset id = "consultFormStart">
+            <div class = "col-md-12"><h2>Let's Get Started. Choose an option below.</h2></div>
+            <div class = "col-md-12"><h2>Who do you need care for?</h2></div>
+            <div class = "row">
+                <div class = "col-md-4">
+                    <div class = "item" data-formvalue = "Myself">
+                        <h5>Myself</h5>
+                    </div>
+                </div>
+
+            <div class = "col-md-4">
+                <div class = "item" data-formvalue = "My parent">
+                    <h5>My parent</h5>
+                </div>
             </div>
-        </div>
+            <div class = "col-md-4">
+                <div class = "item" data-formvalue = "Someone else">
+                    <h5>Someone Else</h5>
+                </div>
+            </div>
 
-        <div class = "col-md-4">
-        <div class = "item" data-formvalue = "My parent">
-            <h5>My parent</h5></div></div>
+            </div>
+        </fieldset>
+        
+        <!--Page 2 of the consulting form-->
 
-        <div class = "col-md-4">
-        <div class = "item" data-formvalue = "Someone else">
-            <h5>Someone Else</h5></div></div>
-
-    </div>
-        </div>
-
-    <div class = "slick-panel">
+    <fieldset id = "consultFormServices">
         <div class = "col-md-12"><h2>Which services are you interested in? (select all that apply)</h2></div>
 
         <div class = "row pb-2">
@@ -305,15 +315,18 @@
             </div>
             
         </div>
-    </div>
-        <div class = "consultFormMeeting">
+    </fieldset>
+        
+        <!--Page 3 of the consulting form-->
+        
+        <fieldset id = "consultFormMeeting">
             <div class = "col-md-12"><h2>When would you like to schedule a meeting?</h2></div>
             <div class = "col-md-12">
                 <h3>Choose a date:</h3>
                 <input type = "date" id = "meetingDate" name = "Meeting Date">
                 <input type = "submit">
             </div>
-                    <div class = "row">
+        <div class = "row">
             <div class = "col-md-4">
                 <div class = "item action">
                     <a class = "view_all" href = "javascript:void(0)">Previous</a>
@@ -327,31 +340,19 @@
             </div>
             
         </div>
-        </div>
+        </fieldset>
         
-        <div class = "consultFormInformation">
+        <!--Page 4 of the consulting form-->
+        
+        <fieldset class = "consultFormInformation">
         <div class = "col-md-12"><h2>Do you have any additional information?</h2></div>
             <div>
             <textarea id = "consultFormInformation" name = "consultFormInformation" rows = "8" cols = "50" placeholder = "Type information here..."></textarea>
             </div>
-        </div>
+        </fieldset>
         
-    <script type ="text/javascript">
+    </form>
 
-        $(document).ready(function(){
-
-            $('#consult_form').slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                adaptiveHeight: true,
-                draggable: false,
-                infinite: false;
-            });
-            
-        });
-
-    </script>
-    </div>
     </div>
     </div>
     
