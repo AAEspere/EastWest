@@ -241,6 +241,10 @@ nav a:visited {
     color: #fff;
 }
 
+#consult_form h3 {
+    color:white;
+}
+
 #consult_form h4 {
     text-align: center;
 }
@@ -395,12 +399,16 @@ footer a {
   text-align: center;
 }
 
-#eastwestSlider {
+.eastwestSlider {
     margin-top: 10px;
     margin-bottom: 10px;
     overflow: hidden;
     width: 100%;
     height: 500px;
+}
+
+.slick-prev:before, .slick-next:before{
+    color:red;
 }
 
 #eastwestPhotos {

@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="CSS/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="CSS/slick/slick.css">
   <link rel="stylesheet" href="CSS/slick/slick-theme.css">
+    
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -93,26 +94,24 @@
 
         <!--ANYTHING YOU NEED TO CHANGE SHOULD BE BETWEEN THE <>. SO FOR EXAMPLE TEXT THAT SHOULD BE CHANGED SHOULD BETWEEN <p>
 ------------------------------------------------------------------------------------------------------------------------------------->
-    <div class = "container">
-    <div id = "eastwestSlider">
+    <div class = "eastwestSlider">
         <div><img src = "eastwest/eastWestBanner.jpg" id = "eastwestPhotos"></div>
         <div><img src = "eastwest/eastwestBanner-long.jpg" id = "eastwestPhotos"></div>
         </div>
-        </div>
         
-  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="CSS/slick/slick.min.js"></script>
   
         <script type = "text/javascript">
             $(document).ready(function(){
-                $("#eastwestSlider").slick({
+                $(".eastwestSlider").slick({
                     autoplay: true,
-                    autoplaySpeed: 5000
+                    autoplaySpeed: 5000,
+                    arrows: true
                 });
             });
         </script>
-        
         
     <p>EastWest’s care team works with your physician, hospital, rehab, assisted living or family member to provide the highest level of care in the comfort of your home. Our holistic approach to home care provides a customized plan for reaching each patient’s optimal wellness. We like to to look for 5 key factors: Nutritional, Emotional / Social, Safety, Physical, and mental for integrated wellness planning. Our home care team has been trained to execute our comprehensive plan of care so that the most favorable results can be achieved. We offer specialized programs for Heart and Lung Disease, Diabetes, Orthopedic Surgeries, Alzheimer’s Disease, Parkinson’s Disease, Dementia, MS or ALS, Strokes, Neurologic Disorders, and Cancer</p>
 
@@ -250,6 +249,7 @@
     <div class = "slick-panel">
         <div class = "col-md-12"><h2>Which services are you interested in? (select all that apply)</h2></div>
 
+        <div class = "row pb-2">
         <div class = "col-md-4">
         <div class = "item" data-formvalue = "Nursing">
             <h5>Nursing</h5></div></div>
@@ -261,7 +261,9 @@
         <div class = "col-md-4">
         <div class = "item" data-formvalue = "Occupational Therapy">
             <h5>Occupational Therapy</h5></div></div>
+        </div>
 
+        <div class = "row">
         <div class = "col-md-4">
         <div class = "item" data-formvalue = "Speech Therapy">
             <h5>Speech Therapy</h5></div></div>
@@ -273,7 +275,9 @@
         <div class = "col-md-4">
         <div class = "item" data-formvalue = "Private Duty / Caregiver">
             <h5>Private Duty / Caregiver</h5></div></div>
+        </div>
 
+        <div class = "row pt-2 pb-2">
         <div class = "col-md-4">
         <div class = "item" data-formvalue = "Medical Supplies">
             <h5>Medical Supplies</h5></div></div>
@@ -285,15 +289,53 @@
         <div class = "col-md-4">
         <div class = "item" data-formvalue = "Telehealth">
             <h5>Telehealth</h5></div></div>
-
-        <div class = "col-md-12">
-        <div class = "item action">
-            <a class = "view_all" href = "javascript:void(0)">Next</a>
+        </div>
+        
+        <div class = "row">
+            <div class = "col-md-4">
+                <div class = "item action">
+                    <a class = "view_all" href = "javascript:void(0)">Previous</a>
+                    </div>
+            </div>
+            
+            <div class = "col-md-4">
+                <div class = "item action">
+                    <a class = "view_all" href = "javascript:void(0)">Next</a>
+                    </div>
+            </div>
+            
+        </div>
+    </div>
+        <div class = "consultFormMeeting">
+            <div class = "col-md-12"><h2>When would you like to schedule a meeting?</h2></div>
+            <div class = "col-md-12">
+                <h3>Choose a date:</h3>
+                <input type = "date" id = "meetingDate" name = "Meeting Date">
+                <input type = "submit">
+            </div>
+                    <div class = "row">
+            <div class = "col-md-4">
+                <div class = "item action">
+                    <a class = "view_all" href = "javascript:void(0)">Previous</a>
+                    </div>
+            </div>
+            
+            <div class = "col-md-4">
+                <div class = "item action">
+                    <a class = "view_all" href = "javascript:void(0)">Next</a>
+                    </div>
+            </div>
+            
+        </div>
+        </div>
+        
+        <div class = "consultFormInformation">
+        <div class = "col-md-12"><h2>Do you have any additional information?</h2></div>
+            <div>
+            <textarea id = "consultFormInformation" name = "consultFormInformation" rows = "8" cols = "50" placeholder = "Type information here..."></textarea>
             </div>
         </div>
-
-    </div>
-
+        
     <script type ="text/javascript">
 
         $(document).ready(function(){
@@ -312,21 +354,22 @@
     </div>
     </div>
     </div>
+    
         <!--Site map -->
     <div class = "sitemap pt-4 pl-5 pb-3">
         
         <div class = "row pb-3">
-            <div class = "col-sm pt-5">
+            <div class = "col-sm-4 pt-5">
                 <ul class = "pt-3">
                     <li><a href = "index.html"><img src = "eastwest/eastwestRed.png"></a></li>
-                    <li><div class = "row sitemap-icon-row">
+                    <li><div class = "row sitemap-icon-row pt-2">
                             <img class = "sitemap-icon" src = "social/twitter-white.png">
                             <a href = "https://www.facebook.com/Eastwest-Health-Services-LLC-152152151496375/"><img class = "sitemap-icon"src = "social/facebook-white.png"></a>
                             <img class = "sitemap-icon"src = "social/googleplus-white.png">
                         </div></li>
                 </ul>
             </div>
-            <div class = "col-sm">
+            <div class = "col-sm-2">
                 <ul>
                     <li class = "pb-2"><b>ABOUT US</b></li>
                     <li><a href = "ourMission.html">Our Mission</a></li>
@@ -336,7 +379,7 @@
                     <li><a href = "#">Apply to be a Caregiver</a></li>
                 </ul>
             </div>
-            <div class = "col-sm">
+            <div class = "col-sm-2">
                 <ul>
                     <li class = "pb-2"><b>OUR SERVICES</b></li>
                     <li><a href = "registeredNursing.html">Registered Nursing</a></li>
@@ -351,7 +394,7 @@
                     <li><a href = "#">Order Medical Supplies</a></li>
                 </ul>
             </div>
-            <div class = "col-sm">
+            <div class = "col-sm-2">
                 <ul>
                     <li class = "pb-2"><br></li>
                     <li><a href = "reviews.html">Reviews</a></li>
