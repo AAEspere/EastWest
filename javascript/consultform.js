@@ -1,4 +1,4 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
             
     alert("This function is getting called");
             var form = $("#consultForm").show();
@@ -33,3 +33,4 @@ $(document).ready(function(){
             })
             
         });
+        */

@@ -89,7 +89,6 @@
     <br>
     <div>
         <h1><b>APPLY TO EASTWEST</b></h1>
-    <p>Some information about applying to Eastwest INSERT HERE</p>
     <p>Some list of things that Eastwest is looking for</p>
         <ul>
             <li>Home Health Aides</li>
@@ -101,13 +100,11 @@
             <li>Speech Therapists</li>
             <li>Marketers</li>
         </ul>
-
-    <h3>TO APPLY</h3>
     </div>
     <br>
     <h2>APPLY NOW</h2>
     <div class = "pb-4">
-        <form>
+        <form method = "POST" action = "applyForm.php" enctype="multipart/form-data">
         <div class = "row">
         <div class = "col-sm">
             <div class = "insertarea">
@@ -142,13 +139,13 @@
 
         <div class = "col-sm">
         Which job are you interested in?<br>
-        <input type = "radio" name = "jobType" value = "HHA" checked> Home Health Aide<br>
-        <input type = "radio" name = "jobType" value = "RN"> Registered Nurse<br>
+        <input type = "radio" name = "jobType" value = "Home Health Aide" checked> Home Health Aide<br>
+        <input type = "radio" name = "jobType" value = "Registered Nurse"> Registered Nurse<br>
         <input type = "radio" name = "jobType" value = "CNA"> CNA<br>
         <input type = "radio" name = "jobType" value = "Caregivers"> Caregivers<br>
-        <input type = "radio" name = "jobType" value = "PT"> Physical Therapists<br>
-        <input type = "radio" name = "jobType" value = "OT"> Occpational Therapists<br>
-        <input type = "radio" name = "jobType" value = "ST"> Speech Therapists<br>
+        <input type = "radio" name = "jobType" value = "Physical Therapist"> Physical Therapists<br>
+        <input type = "radio" name = "jobType" value = "Occupational Therapist"> Occupational Therapists<br>
+        <input type = "radio" name = "jobType" value = "Speech Therapist"> Speech Therapists<br>
         <input type = "radio" name = "jobType" value = "Marketers"> Marketers<br>
         <input type = "radio" name = "jobType" value = "Other"> Other<br>
             
@@ -160,6 +157,7 @@
         <br>
         Additional Details<br>
         <textarea id = "subject" name = "applyMessage" placeholder = "Write text here..." style = "height: 150px" required = "required"></textarea><br>
+        <input type = "submit" value = "submit">
         </form>
     </div>
 

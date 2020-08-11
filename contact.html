@@ -100,7 +100,7 @@
 
     <!--The form detailing what is submitted in the contact us section -->
     <div class = "sendMessage">
-        <form method = "post" action = "contactForm.php" >
+        <form method = "POST" action = "contactForm.php" >
         <h3>Send us a message</h3>
             <div class = "insertarea">
             Your name*<br>
@@ -109,17 +109,17 @@
 
             <div class = "insertarea">
             Email*<br>
-            <input type = "email" name = "contactEmail" placeholder = "name@domain.com/org/net" required = "required">
+            <input type = "email" name = "contactEmail" placeholder = "name@domain.com" required = "required">
             </div>
 
             <div class = "insertarea">
             Phone Number <br>
-            <input type = "tel" placeholder = "###-###-####" name = "contactMobile" pattern = "\d{3}[\-]\d{3}[\-]\d{4}">
+            <input type = "tel" placeholder = "###-###-####" name = "contactPhone" pattern = "\d{3}[\-]\d{3}[\-]\d{4}">
             </div>
 
             <div class = "insertarea">
             How can we help you?* <br>
-            <textarea id = "subject" name = "contactSubject" placeholder = "Write here..." style = "height: 100px" required = "required"></textarea><br>
+            <textarea id = "subject" name = "contactMessage" placeholder = "Write here..." style = "height: 100px" required = "required"></textarea><br>
             </div>
             
             <div class="g-recaptcha" data-sitekey="6LcUjbQUAAAAADtZGdDo7w_anY69W5bJG9MZxCiH" required = "required"></div>

@@ -1,44 +1,40 @@
 <?php
-$emailto = 'eastwesthomecare@eastwesthealthservices.com';
-
-//Apply form information
+//PHPMailer
+require_once('PHPMailer-master/src/PHPMailer.php');
+require_once('PHPMailer-master/src/Exception.php');
+require_once('PHPMailer-master/src/SMTP.php');
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+ob_start();
+$email = new PHPMailer();
+$emailto = 'aespere0@gmail.com';
 $emailfrom = $_POST['applyEmail'];
+$emailDomain = 'eastwfa1@box5583.bluehost.com';
 $firstName = $_POST['firstName'];
 $lastName = $_POST['lastName'];
 $address = $_POST['address'];
 $CSZ = $_POST['CSZ'];
-$phone = $_POST['contactMobile'];
-$message = $_POST['applyMessage'];
+$phone = $_POST['phone'];
 $jobType = $_POST['jobType'];
-$resume = $_POST['resume'];
-
-$subject = 'Contact Form Information';
-
-
-$messagebody = 'APPLICATION INFORMATION'. "\n".
-    
-    
-                'Name: '.$firstName. " " .$lastName."\n".
-                'Email: '.$emailfrom. "\n".
-                'Phone: '.$phone. "\n".
-                'Address: ' .$address. "\n".
-                'City, State, Zip Code: ' .$CSZ. "\n".
-                'Job Type: ' .$jobType. "\n".
-                'Message: '.$message. "\n";
-
-
-
-$headers = 
-	//'Return-Path: ' . $emailfrom . "\r\n" . 
-	//'From: ' . $fromname . ' <' . $emailfrom . '>' . "\r\n" . 
-	'X-MSMail-Priority: High' . "\r\n" . 
-	'X-Mailer: PHP ' . phpversion() .  "\r\n" . 
-	//'Reply-To: ' . $fromname . ' <' . $emailfrom . '>' . "\r\n" .
-	'MIME-Version: 1.0' . "\r\n" . 
-	'Content-Transfer-Encoding: 8bit' . "\r\n" . 
-	'Content-Type: text/plain; charset=UTF-8' . "\r\n";
-//$params = '-f ' . $emailfrom;
-$test = mail($emailto, $subject, $messagebody, $headers); // $params);
-header('Location: contact.html');
-// $test should be TRUE if the mail function is called correctly
+$subject = 'EastWest - Apply Form Information';
+$message = $_POST['applyMessage'];
+$messagebody = 'APPLY FORM INFORMATION'. "\n\n".
+	'Name: '.$firstName.' '.$lastName."\n".
+	'Email: '.$emailfrom."\n".
+	'Phone Number: '.$phone."\n".
+	'Address: '.$address."\n".
+	'City, State, Zip Code: '.$CSZ."\n".
+	'Job: '.$jobType."\n".
+	'Message: '.$message."\n";
+$attachment_tmp = $_FILES['resume']['tmp_name'];
+$attachment_name = $_FILES['resume']['name'];
+//PHPMailer
+$email->setFrom($emailDomain);
+$email->addAddress($emailto);
+$email->Body = $messagebody;
+$email->Subject = $subject;
+$email->addAttachment($attachment_tmp, $attachment_name);
+$email->send();
+header('Location: apply.html');
+exit();
 ?>
