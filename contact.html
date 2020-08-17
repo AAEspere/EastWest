@@ -84,6 +84,13 @@
     <!--Contact us information-->
     <br>
     <h1><b>CONTACT US</b></h1>
+    <div class = "alert alert-success alert-dismissable fade show">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Success! </strong>Your message was sent successfully!
+    </div>
+    <div class = "alert alert-danger alert-dismissable fade show">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Your message could not be sent.</strong> Please try again.</div>
     <div id = "contacticons">
     <br>
         <br>
@@ -95,7 +102,7 @@
 
     <!--The form detailing what is submitted in the contact us section -->
     <div class = "sendMessage">
-        <form method = "POST" action = "contactForm.php" >
+        <form name = "contact" method = "POST" action = "contactForm.php" >
         <h3>Send us a message</h3>
             <div class = "insertarea">
             Your name*<br>
@@ -123,7 +130,22 @@
             
             <input type = "submit" value = "submit">
         </form>
+<script>
+    $(document).ready(function() {
+        $("form[name=contact]").submit(function(){
 
+            $.ajax( {
+                type: "POST",
+                url = "contactForm.php",
+                data = $(this).serialize(),
+                success: function() {
+                    $('.alert-success').fadeIn(100).show();
+                }
+            })
+
+        })
+    })
+</script>
     </div>
 
     <!--The google map of the contact us section-->
