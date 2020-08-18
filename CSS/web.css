@@ -248,14 +248,29 @@ nav li:hover {
 .indexTabs {
     background-color:#B61F24;
     color: white;
-    float: left;
     border: none;
     outline: none;
-    width: 20%;
+    width: 100%;
+    height: 30px;
+    text-align: left;
+    border: solid 1px;
 }
 
 .indexTabs:hover {
     background-color: #850408;
+}
+
+#defaultOpen {
+   /* background-color: #850408;  */
+}
+
+#tabs {
+    border-color: rgb(155, 146, 146);
+}
+
+#tabs ul {
+    list-style-type: none;
+    padding-left: 0;
 }
 
 /*Call to action, which is on the bottom of the website*/

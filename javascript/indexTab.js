@@ -1,4 +1,4 @@
-function indexTab(jobName) {
+function indexTab(jobName, element) {
     var i, tabContent;
 
     tabContent = document.getElementsByClassName("indexTabContent");
@@ -7,6 +7,8 @@ function indexTab(jobName) {
     }
 
     document.getElementById(jobName).style.display = "block";
+    //document.querySelector('button.indexTabs').removeAttribute('id');
+    document.querySelector(element).id = "defaultOpen"
 }
 
 document.getElementById("defaultOpen").click();
