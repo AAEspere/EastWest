@@ -117,7 +117,15 @@ This css file comprises the template of the website. The template consists of th
 }
 #logopic {
     width: 240px;
-    height: 55px;
+    height: 70px;
+}
+
+#mobileOnly {
+    display: none;
+}
+
+#navLogo {
+
 }
 
 /*3. Navigation */
@@ -177,6 +185,10 @@ nav li:hover {
 .navbar-nav > li > .dropdown-menu a:hover {
     background-color: #850408;
     color: #FFFFFF;
+}
+
+.navitems {
+    padding-top: 20px;
 }
 
 #coloredBox {
@@ -513,11 +525,23 @@ footer a:hover {
     }
     #logopic {
         padding-bottom: 0px;
-        margin-bottom: -40px;
         float: center;
+        width: 100%;
+        height: 120px;
     }
     #logotext {
         display: none;
+    }
+    #navLogo {
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+    #mobileOnly {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
     #contacticons {
         float: none;
