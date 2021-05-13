@@ -20,64 +20,82 @@
 <!--Social media part of the top bar-->
 <div id = "stickyNav">
     <div id = "toprow" class = "pb-4 pt-1">
-        <div class = "contact">
-        <ul>
-      <li><a href = "https://my.adlware.com/family">Family Portal</a></li>
-      <li><a href = "https://my.adlware.com/cp">Caregiver Portal</a></li>
-      <li><a href = "mailto:eastwesthomecare@gmail.com"><i class = "fa fa-envelope"></i> eastwesthomecare@gmail.com</a></li>
-      <li><a href = "tel:586-582-9690"><i class = "fa fa-phone"></i> (586)582-9690</a></li>
-      </ul>
+        <div id = "wrapper">
+            <div class = "contact">
+                <ul>
+                    <li><a href = "https://my.adlware.com/family">Family Portal</a></li>
+                    <li><a href = "https://my.adlware.com/cp">Caregiver Portal</a></li>
+                    <li><a href = "mailto:eastwesthomecare@gmail.com"><i class = "fa fa-envelope"></i> eastwesthomecare@gmail.com</a></li>
+                    <li><a href = "tel:586-582-9690"><i class = "fa fa-phone"></i> (586)582-9690</a></li>
+                </ul>
             </div>
         </div>
-    
-    <!--The navigation of the website-->
-    <div class = "row" id = "logo">
-        <div class = "col-sm">     
-            <a href = "index.html"><img id = "logopic" class = "pl-5 ml-5" src = "eastwest/eastwestRed.png"></a>
-        </div>
-        <div>
-    <nav class = "navbar navbar-expand-lg pt-4">
-        <div class = "container">
-            <ul class = "nav navbar-nav">
-                <li class = "nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ABOUT US</a>
-                <div class = "dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">
-                    <a class = "dropdown-item" href = "ourMission.html">OUR MISSION</a>
-                    <a class = "dropdown-item" href = "tenReasons.html">10 REASONS TO CONTACT EASTWEST</a>
-                    <a class = "dropdown-item" href = "101Ways.html">101 WAYS WE CAN HELP YOU</a>
-                    <a class = "dropdown-item" href = "#">PHYSICIAN REFERRAL</a>
-                    <a class = "dropdown-item" href = "#">APPLY TO BE A CAREGIVER</a>
+    </div>
+    <div id = "mobileOnly">
+        <img id = "logopic" src = "eastwest/eastwestRed.png">
+    </div>
+    <!--Remaking the navigation of the website - so it's more mobile responsive-->
+    <!--The navigation of the website-->   
+    <nav class = "navbar navbar-expand-lg ms-auto">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+        aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
+        class="fa fa-bars"></i></span></button>
+        <div id = "wrapper">
+            <div class = "row">
+                <div class = "col" id = "navLogo">
+                    <a class = "mr-left" href = "index.html"><img id = "logopic" src = "eastwest/eastwestRed.png"></a>
                 </div>
-                </li>
-    
-                <li class = "nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">OUR SERVICES</a>
-                <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">
-                    <a class = "dropdown-item" href = "registeredNursing.html">REGISTERED NURSING</a>
-                    <a class = "dropdown-item" href = "physicalTherapy.html">PHYSICIAL THERAPY</a>
-                    <a class = "dropdown-item" href = "occupationalTherapy.html">OCCUPATIONAL THERAPY</a>
-                    <a class = "dropdown-item" href = "homeHealthAide.html">HOME HEALTH AIDE</a>
-                    <a class = "dropdown-item" href = "speechTherapy.html">SPEECH THERAPY</a>
-                    <a class = "dropdown-item" href = "medicalSocialWorker.html">MEDICAL SOCIAL WORKER</a>
-                    <a class = "dropdown-item" href = "privateDuty.html">PRIVATE DUTY-CAREGIVER SERVICES</a>
-                    <a class = "dropdown-item" href = "caseManagement.html">CASE MANAGEMENT</a>
-                    <a class = "dropdown-item" href = "medicalMonitoring.html">MEDICAL MONITORING</a>
-                    <a class = "dropdown-item" href = "#">ORDER MEDICAL SUPPLIES</a>
-                </div>
-                </li>
-    
-    
-                <li class = "nav-item"><a class = "nav-link" href = "reviews.html">REVIEWS</a></li>
-                <li class = "nav-item"><a class = "nav-link" href = "contact.html">CONTACT US</a></li>
-                <li class = "nav-item"><a class = "nav-link" href = "apply.html">APPLY</a></li>
-                <li class = "nav-item"><button class = "navbar-btn" id = "coloredBox"><a class = "nav-link" href = "#">SCHEDULE YOUR ASSESSMENT</a></button></li>
-            </ul>
+                <div class = "col navitems">
+                                <!-- Collapse button -->
+            <div class = "collapse navbar-collapse" id = "navbarSupportedContent1">
+                <ul class = "nav navbar-nav ml-auto">
+                    <li class = "nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ABOUT US</a>
+                            <div class = "dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">
+                                <a class = "dropdown-item" href = "ourMission.html">OUR MISSION</a>
+                                <a class = "dropdown-item" href = "tenReasons.html">10 REASONS TO CONTACT EASTWEST</a>
+                                <a class = "dropdown-item" href = "101Ways.html">101 WAYS WE CAN HELP YOU</a>
+                                <!--
+                                <a class = "dropdown-item" href = "#">PHYSICIAN REFERRAL</a>
+                                <a class = "dropdown-item" href = "#">APPLY TO BE A CAREGIVER</a>
+                                -->
+                            </div>
+                    </li>
+            
+                    <li class = "nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">OUR SERVICES</a>
+                            <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">
+                                <a class = "dropdown-item" href = "registeredNursing.html">REGISTERED NURSING</a>
+                                <a class = "dropdown-item" href = "physicalTherapy.html">PHYSICIAL THERAPY</a>
+                                <a class = "dropdown-item" href = "occupationalTherapy.html">OCCUPATIONAL THERAPY</a>
+                                <a class = "dropdown-item" href = "homeHealthAide.html">HOME HEALTH AIDE</a>
+                                <a class = "dropdown-item" href = "speechTherapy.html">SPEECH THERAPY</a>
+                                <a class = "dropdown-item" href = "medicalSocialWorker.html">MEDICAL SOCIAL WORKER</a>
+                                <a class = "dropdown-item" href = "privateDuty.html">PRIVATE DUTY-CAREGIVER SERVICES</a>
+                                <a class = "dropdown-item" href = "caseManagement.html">CASE MANAGEMENT</a>
+                                <a class = "dropdown-item" href = "medicalMonitoring.html">MEDICAL MONITORING</a>
+                                <!--
+                                <a class = "dropdown-item" href = "#">ORDER MEDICAL SUPPLIES</a>
+                                -->
+                            </div>
+                    </li>
+            
+                    <!--
+                    <li class = "nav-item"><a class = "nav-link" href = "reviews.html">REVIEWS</a></li>
+                    -->
+                    <li class = "nav-item"><a class = "nav-link" href = "contact.html">CONTACT US</a></li>
+                    <li class = "nav-item"><a class = "nav-link" href = "apply.html">APPLY</a></li>
+                    <!--
+                    <li class = "nav-item"><button class = "navbar-btn" id = "coloredBox"><a class = "nav-link" href = "#">SCHEDULE YOUR ASSESSMENT</a></button></li>
+                    -->
+                </ul>
         </div>
-        </nav>  
-        <script src = "javascript/stickyNav.js"></script>
-    </div>
-    </div>
-    </div>
+                </div>
+            </div>
+
+        </div>
+    </nav> 
+</div>
 <div id = "wrapper">
 
     <!--TO CHANGE TEXT JUST CHANGE IN BETWEEN <p> and <li>
@@ -106,131 +124,9 @@
         <li>Improve problem-solving skills, memory, and sequencing for independent living</li>
         <li>Compensate for permanent loss of function</li>
     </ul>
-
-
-
-<!--The consult form for the website where users can input what they need and then their email
-    <div id = "consult_form">
-    <div class = "slick-panel">
-    <div class = "col-md-12"><h2>Let's Get Started. Choose an option below.</h2></div>
-    <div class = "col-md-12"><h2>Who do you need care for?</h2></div>
-
-        <div class = "col-md-4">
-            <div class = "item" data-formvalue = "Myself">
-            <h5>Myself</h5>
-            </div>
-        </div>
-
-        <div class = "col-md-4">
-        <div class = "item" data-formvalue = "My parent">
-            <h5>My parent</h5></div></div>
-
-        <div class = "col-md-4">
-        <div class = "item" data-formvalue = "Someone else">
-            <h5>Someone Else</h5></div></div>
-
-    </div>
-
-    <div class = "slick-panel">
-        <div class = "col-md-12"><h2>Which services are you interested in? (select all that apply)</h2></div>
-
-        <div class = "col-md-4">
-        <div class = "item" data-formvalue = "Nursing">
-            <h5>Nursing</h5></div></div>
-
-        <div class = "col-md-4">
-        <div class = "item" data-formvalue = "Physical Therapy">
-            <h5>Physical Therapy</h5></div></div>
-
-        <div class = "col-md-4">
-        <div class = "item" data-formvalue = "Occupational Therapy">
-            <h5>Occupational Therapy</h5></div></div>
-
-        <div class = "col-md-4">
-        <div class = "item" data-formvalue = "Speech Therapy">
-            <h5>Speech Therapy</h5></div></div>
-
-        <div class = "col-md-4">
-        <div class = "item" data-formvalue = "Medical Social Worker">
-            <h5>Medical Social Worker</h5></div></div>
-
-        <div class = "col-md-4">
-        <div class = "item" data-formvalue = "Private Duty / Caregiver">
-            <h5>Private Duty / Caregiver</h5></div></div>
-
-        <div class = "col-md-4">
-        <div class = "item" data-formvalue = "Medical Supplies">
-            <h5>Medical Supplies</h5></div></div>
-
-        <div class = "col-md-4">
-        <div class = "item" data-formvalue = "Medical Monitoring">
-            <h5>Medical Monitoring</h5></div></div>
-
-        <div class = "col-md-4">
-        <div class = "item" data-formvalue = "Telehealth">
-            <h5>Telehealth</h5></div></div>
-
-        <div class = "col-md-12">
-        <div class = "item action">
-            <a class = "view_all" href = "javascript:void(0)">Next</a>
-            </div>
-        </div>
-
-    </div>
--->
-    </div>
-
-        <!--Site map -->
-    <div class = "sitemap pt-4 pl-5 pb-3">
-        
-        <div class = "row pb-3">
-            <div class = "col-sm-4 pt-5">
-                <ul class = "pt-3">
-                    <li><a href = "index.html"><img src = "eastwest/eastwestRed.png"></a></li>
-                    <li><div class = "row sitemap-icon-row pt-2">
-                            <img class = "sitemap-icon" src = "social/twitter-white.png">
-                            <a href = "https://www.facebook.com/Eastwest-Health-Services-LLC-152152151496375/"><img class = "sitemap-icon"src = "social/facebook-white.png"></a>
-                            <img class = "sitemap-icon"src = "social/googleplus-white.png">
-                        </div></li>
-                </ul>
-            </div>
-            <div class = "col-sm-2">
-                <ul>
-                    <li class = "pb-2"><b>ABOUT US</b></li>
-                    <li><a href = "ourMission.html">Our Mission</a></li>
-                    <li><a href = "tenReasons.html">10 Reasons to Contact Eastwest</a></li>
-                    <li><a href = "101Ways.html">101 Ways We Can Help You</a></li>
-                    <li><a href = "#">Physician Referral</a></li>
-                    <li><a href = "#">Apply to be a Caregiver</a></li>
-                </ul>
-            </div>
-            <div class = "col-sm-2">
-                <ul>
-                    <li class = "pb-2"><b>OUR SERVICES</b></li>
-                    <li><a href = "registeredNursing.html">Registered Nursing</a></li>
-                    <li><a href = "physicalTherapy.html">Physical Therapy</a></li>
-                    <li><a href = "occupationalTherapy.html">Occupational Therapy</a></li>
-                    <li><a href = "homeHealthAide.html">Home Health Aide</a></li>
-                    <li><a href = "speechTherapy.html">Speech Therapy</a></li>
-                    <li><a href = "medicalSocialWorker.html">Medical Social Worker</a></li>
-                    <li><a href = "privateDuty.html">Private Duty-Caregiver Services</a></li>
-                    <li><a href = "caseManagement.html">Case Management</a></li>
-                    <li><a href = "medicalMonitoring.html">Medical Monitoring</a></li>
-                    <li><a href = "#">Order Medical Supplies</a></li>
-                </ul>
-            </div>
-            <div class = "col-sm-2">
-                <ul>
-                    <li class = "pb-2"><br></li>
-                    <li><a href = "reviews.html">Reviews</a></li>
-                    <li><a href = "contact.html">Contact Us</a></li>
-                    <li><a href = "apply.html">Apply</a></li>
-                </ul
-            ></div>
-        </div>  
+    </div> 
     <footer>
     <p><a href = "tel:586-582-9690"><i class = "fa fa-phone"></i> (586)582-9690</a> &nbsp-&nbsp <a href = "mailto:eastwesthomecare@gmail.com"><i class = "fa fa-envelope"></i> eastwesthomecare@gmail.com</a> <br>
     © 2020 EastWest Health Services</p>
     </footer>
-        </div>
 </html>

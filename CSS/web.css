@@ -6,10 +6,13 @@
   width: 80%;
   min-width: 500;
   max-width: 1360px;
+  flex: 1;
 }
 
 body {
-  background-color: #FFFFFF;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 /*GENERAL STUFF*/
