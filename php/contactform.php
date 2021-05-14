@@ -2,6 +2,10 @@
 
 if(isset($_POST['submit'])) {
     
+    //this should limit the amount of spam from bots
+    //people might still be able to manually spam though
+    if(!empty($_POST['email']) || !empty($_POST['phone']) || !empty($_POST['yourName'])) die();
+
     $name = $_POST['contactName'];
     $email = $_POST['contactEmail'];
     $phone = $_POST['contactMobile'];

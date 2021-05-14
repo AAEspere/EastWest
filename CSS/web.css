@@ -9,6 +9,14 @@
   flex: 1;
 }
 
+#navWrapper {
+    margin-left:auto;
+    margin-right:auto;
+    width: 80%;
+    min-width: 500;
+    max-width: 1360px;
+}
+
 body {
     display: flex;
     min-height: 100vh;
@@ -476,6 +484,10 @@ footer a:hover {
     padding-bottom: 15px;
 }
 
+/*Protection against spam from bots using Honeypotting*/
+.sProtect {
+    display: none;
+}
 
 #map {
     clear: both;
@@ -548,9 +560,17 @@ footer a:hover {
     }
     #contacticons {
         float: none;
+        width: 100%;
+    }
+    #contacticons h2 {
+        font-size: 20px;
     }
     .sendMessage {
         float: none;
+        width: 100%;
+    }
+    nav {
+        font-size: 16px;
     }
 }
 
