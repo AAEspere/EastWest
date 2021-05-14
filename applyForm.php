@@ -7,7 +7,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 ob_start();
 $email = new PHPMailer();
-$emailto = 'aespere0@gmail.com';
+$emailto = 'eastwesthomecare@eastwesthealthservices.com';
 $emailfrom = $_POST['applyEmail'];
 $emailDomain = 'eastwfa1@box5583.bluehost.com';
 $firstName = $_POST['firstName'];

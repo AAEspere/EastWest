@@ -11,7 +11,7 @@ if(isset($_POST['submit'])) {
     $phone = $_POST['contactMobile'];
     $message = $_POST['contactSubject'];
     
-    $mailTo = 'eastwesthomecare@eastwesthealthservices.com';
+    $mailTo = 'aespere0@gmail.com';
 
     $subject = "Contact Form information";
     

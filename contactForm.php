@@ -2,7 +2,8 @@
 ob_start();
 //eastwest email is eastwesthomecare@eastwesthealthservices.com
 if(!isset($_POST['submit'])) {
-    $emailto = 'aespere0@gmail.com';
+    if(!empty($_POST['email']) || !empty($_POST['phone']) || !empty($_POST['yourName'])) die();
+    $emailto = 'eastwesthomecare@eastwesthealthservices.com';
     $emailfrom = $_POST['contactEmail'];
     $fromname = $_POST['contactName'];
     $phone = $_POST['contactPhone'];
@@ -13,7 +14,7 @@ if(!isset($_POST['submit'])) {
         'Email: '.$emailfrom. "\n".
         "Phone: ".$phone. "\n".
         "Message: ".$message. "\n";
-    mail($emailto, $subject, $messagebody, 'From: '.$emailfrom);
+    mail($emailto, $subject, $messagebody, 'From:  '.$emailfrom);
     header('Location: contact.html');
     exit();
 }
