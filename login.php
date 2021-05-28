@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php ?>
 <html lang = "en">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Name of the website-->
@@ -20,15 +20,9 @@
         </div>
         <div id = "wrapper">
             <div class = "registerPage">
-                <form action = "signUp.php">
+                <form action = "login.php" method = "POST">
                     <h1>Register</h1>
                     <p>Fill out the following parameters:</p>
-
-                    <label for = "fName">First Name: </label>
-                    <input type = "text" placeholder = "First Name" name = "fName" id = "fName" required>
-
-                    <label for = "lName">Last Name: </label>
-                    <input type = "text" placeholder = "Last Name" name = "lName" id = "lName" required>
 
                     <label for = "email">Email: </label>
                     <input type = "text" placeholder = "Email" name = "email" id = "email" required>
@@ -36,16 +30,7 @@
                     <label for = "password">Password: </label>
                     <input type = "password" placeholder = "Password" name = "pass" id = "pass" required>
 
-                    <label for = "password-reenter">Re-Enter Password: </label>
-                    <input type = "password" placeholder = "Re-Enter Password" name = "pass-reenter" id = "pass-reenter" required>
-
-                    <label for = "secret">Secret Code: </label>
-                    <input type = "password" placeholder = "Secret Code" name = "secret" id = "secret" required>
-
-                    <!-- Spam Protection -->
-                    <input type = "text" class = "sProtect" name = "phone">
-                    <input type = "text" class = "sProtect" name = "yourName">
-
+                    <p>Not a member? <a href = "signUp.php"> Sign Up </a></p>
                     <input type = "submit" value = "submit">
                 </form>
             </div>
