@@ -1,4 +1,4 @@
-<?php ?>
+<?php include('server.php')?>
 <!DOCTYPE html>
 <html lang = "en">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,7 +48,7 @@
                     <input type = "text" class = "sProtect" name = "yourName">
 
                     <p> Already a member? <a href = "login.php">Log In</a></p>
-                    <input type = "submit" value = "submit">
+                    <input type = "submit" value = "submit" name = "register">
                 </form>
             </div>
         </div>

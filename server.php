@@ -11,9 +11,9 @@
 
     $errors = array();
 
-    $db = mysqli_connect('localhost', 'root', '', 'registration');
+    $db = mysqli_connect('127.0.0.1', 'root', 'EastWestTest621', 'eastwest');
 
-    if(isset($_POST['reg_user'])) {
+    if(isset($_POST['register'])) {
         $email = mysqli_real_escape_string($db, $_POST['email']);
         $fName = mysqli_real_escape_string($db, $_POST['fName']);
         $lName = mysqli_real_escape_string($db, $_POST['lName']);
@@ -28,15 +28,33 @@
             array_push($errors, "Passwords do not match");
         }
 
-        $codeQuery = "SELECT * FROM codes WHERE secretCode = '$secretCode'";
+        $codeQuery = "SELECT * FROM codes WHERE code = '$secretCode'";
         $result = mysqli_query($db, $codeQuery);
 
-        if(mysqli_num_rows($results) == 0) {
+        if(mysqli_num_rows($result) == 0) {
             array_push($errors, "Secret Code does not match");
         }
 
         //check for existing user
+        $emailcheck = "SELECT * FROM users WHERE email = '$email' LIMIT 1";
+        $result = mysqli_query($db, $emailcheck);
+        $user = mysqli_fetch_assoc($result);
 
+        if($user) {
+            if($user['email'] == $email) {
+                array_push($errors, 'Email already is being used');
+            }
+        }
+
+        if(count($errors) == 0) {
+            $pass = md5($pass);
+        }
+
+        $registerQuery = "INSERT INTO users(fName, lName, email, pass) VALUES('$fName', '$lName', '$email', '$pass')";
+        mysqli_query($db, $registerQuery);
+        $_SESSION['email'] = $email;
+        $_SESSION['success'] = 'You are now logged in';
+        header('index.html');
     }
 
     //log in stuff
