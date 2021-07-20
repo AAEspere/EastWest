@@ -34,6 +34,9 @@
                     <label for = "email">Email: </label>
                     <input type = "text" placeholder = "Email" name = "email" id = "email" required>
 
+                    <label for = "username">Username: </label>
+                    <input type = "text" placeholder = "Username" name = "username" id = "username" required>
+
                     <label for = "password">Password: </label>
                     <input type = "password" placeholder = "Password" name = "pass" id = "pass" required>
 

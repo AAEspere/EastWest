@@ -1,4 +1,10 @@
-<?php ?>
+<?php 
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+    header('location: index.php');
+    exit;
+}
+include('server.php');
+?>
 <html lang = "en">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Name of the website-->
@@ -31,7 +37,7 @@
                     <input type = "password" placeholder = "Password" name = "pass" id = "pass" required>
 
                     <p>Not a member? <a href = "signUp.php"> Sign Up </a></p>
-                    <input type = "submit" value = "submit">
+                    <input type = "submit" value = "submit" name = "login_user">
                 </form>
             </div>
         </div>

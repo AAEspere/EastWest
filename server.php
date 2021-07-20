@@ -1,5 +1,8 @@
 <?php 
 
+    //server file - which will handle the signUp and the login
+    //I might make a seperate file which handles all of the file types
+
     //register stuff
     session_start();
 
@@ -15,6 +18,7 @@
 
     if(isset($_POST['register'])) {
         $email = mysqli_real_escape_string($db, $_POST['email']);
+        $username = mysqli_real_escape_string($db, $_POST['username']);
         $fName = mysqli_real_escape_string($db, $_POST['fName']);
         $lName = mysqli_real_escape_string($db, $_POST['lName']);
         $pass = mysqli_real_escape_string($db, $_POST['pass']);
@@ -22,6 +26,7 @@
         $secretCode = mysqli_real_escape_string($db, $_POST['secret']);
 
         if(empty($email)) { array_push($errors, "Email is required");}
+        if(empty($username)) {array_push($errors, "Username is required");}
         if(empty($fName)) { array_push($errors, "First Name is required");}
         if(empty($lName)) { array_push($errors, "Last Name is required");}
         if($pass != $passreenter) {
@@ -47,10 +52,11 @@
         }
 
         if(count($errors) == 0) {
-            $pass = md5($pass);
+            //hashing
+            $pass = password_hash($pass, PASSWORD_DEFAULT);
         }
 
-        $registerQuery = "INSERT INTO users(fName, lName, email, pass) VALUES('$fName', '$lName', '$email', '$pass')";
+        $registerQuery = "INSERT INTO users(fName, lName, email, user, pass) VALUES('$fName', '$lName', '$username', '$email', '$pass')";
         mysqli_query($db, $registerQuery);
         $_SESSION['email'] = $email;
         $_SESSION['success'] = 'You are now logged in';
